@@ -3,13 +3,15 @@ import helmet from 'helmet';
 import cors from "cors";
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsersMiddleware } from './users/user.middleware';
+import { UsersMiddleware } from './users/middleware/user.middleware';
 import { UsersModule } from './users/users.module';
 import { UsersController } from './users/users.controller';
 import { ConfigModule } from '@nestjs/config';
 import configuration from './helpers/configuration';
 import { APP_FILTER } from '@nestjs/core';
 import { HttpExceptionFilter } from './common/exception';
+import { DatabaseModule } from './helpers/database/database.module';
+import { AuthModule } from './auth/auth.module';
 
 //Import module here
 @Module({
@@ -18,6 +20,8 @@ import { HttpExceptionFilter } from './common/exception';
       load: [configuration],
     }
   ),
+    DatabaseModule,
+    AuthModule,
     UsersModule,
   ],
   controllers: [AppController],

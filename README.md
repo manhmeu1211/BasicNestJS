@@ -1,68 +1,51 @@
-# BasicNestJS
+# KSK_API
 
-BasicProject NestJs
+[![Awesome NestJS](https://img.shields.io/badge/Awesome-NestJS-blue.svg?longCache=true&style=flat-square)](https://github.com/juliandavidmr/awesome-nestjs)
 
-Cấu trúc project:
+> This is an ever-evolving, very opinionated architecture and dev environment for new node projects using [NestJS](https://nestjs.com). Questions, feedback, and for now, even bikeshedding are welcome. 😄
 
-- Khởi tạo project sẽ có các thành phần chính sau đây:
- + main.ts: Sử dụng NestFactory để khởi tạo ứng dụng.
- + app.controller.ts: Chứa các router để xử lý các request và trả về response cho client.
- + app.controller.spec.ts: Có nhiệm vụ viết unit-test cho các controller.
- + app.module.ts: Root module của ứng dụng.
- + app.service.ts: Service chứa các logic mà controller sẽ dùng đến.
+## Getting started
 
-- Helpers: Lưu trữ những file config, hoặc những file có thể dùng chung cho hệ thống
- + Database config
- + App config ( PORT, HOST, ... )
- 
-- Module: Các Module của ứng dụng ( bao gôm provider, controller, import, export )
- + Module có nhiệm vụ đóng gói những logic liên quan của các chức năng cần triển khai đến client một cách độc lập.
- + Một module trong Nest là class được define với @Module (). 
- + @Module() sẽ cung cấp metadata mà Nest sử dụng để tổ chức cấu trúc ứng dụng
- + Trong một module sẽ bao gồm các thành phần chính sau đây:
-  . providers: Có nhiệm vụ khởi tạo và cung cấp các service mà sẽ được controller trong module sẽ sử dụng đến.
-  . controllers: Có nhiệm vụ khởi tạo những controller đã được xác định trong module.
-  . imports: Có nhiệm vụ import những thành phần của một module khác mà module sẽ sử dụng.
-  . exports: Có nhiệm vụ export các thành phần của provider và các module khác sẻ import để sử dụng.
-  
-- Controller:
- + Lưu trữ file xử lí logic ( query database, handle logic ...) chứa các router để xử lý các request và trả về response cho client.
- + Để tạo ra một controller chúng ta sử dụng một class và @Controller().
- + @Controller() sẽ có nhiệm vụ liên kết class Controller đó với request tương ứng
+```bash
+# 1. Clone the repository or click on "Use this template" button.
+git clone https://git.amela.vn/kisshoku-kanri/api.git
 
-- Spec: Có nhiệm vụ viết unit-test cho các controller.
+# 2. Enter your newly-cloned folder.
+cd api
 
-- Service: 
- + Service chứa các logic mà controller sẽ dùng đến ( Chứa Provider: nơi cung cấp các servce, repositories, factories, helpers,... cho controller trong một module sử dụng )
- 
-- DTO (Data Transfer Object): 
- + Chặn những dữ liệu không hợp lệ trước khi thực hiện xử lý...
- 
-- Models: 
- + Các entity được lưu trữ thành một model
+# 3. Install dependencies. (Make sure yarn is installed: https://yarnpkg.com/lang/en/docs/install)
+# Install yarn to avoid package conflicts, If you install using npm, there may be conflicts between versions of node
+yarn
 
-- Middleware:
- + Chứa các file xử lí error, validate ...
- + Thực thi bất kỳ đoạn code nào.
- + Thực hiện các thay đổi đối với request và response object.
- + Kết thúc chu kỳ request-response.
- + Gọi hàm middleware tiếp theo trong ngăn xếp.
- + Nếu hàm middleware hiện tại không kết thúc chu kỳ request-response, nó phải gọi next() để chuyển quyền điều khiển cho hàm middleware tiếp theo. Nếu không, request sẽ bị treo.
+# 4. Run development server and open http://localhost:3000
+yarn start:dev
 
-- Interceptor:
- + Ràng buộc logic bổ sung trước / sau khi thực thi phương thức
- + Biến đổi kết quả trả về từ một hàm
- + Biến đổi exception được ném ra từ một hàm
- + Mở rộng hành vi function cơ bản
- + Override hoàn toàn một function tùy thuộc vào các điều kiện cụ thể
+# 5. Read the documentation linked below for "Setup and development".
+```
 
-- Guards:
- + Guards có quyền truy cập vào instance ExecutionContext và do đó biết chính xác những gì sẽ được thực thi tiếp theo.
- + Chúng được thiết kế, giống như exception filters, pipes và interceptors, để cho phép bạn sử dụng logic xử lý chính xác vào đúng điểm trong chu kỳ request/response
+## Documentation
 
-- Exception filters: 
- + Nest cung cấp một thành phần xử lý các trường hợp ngoại lệ mà ứng dụng của bạn chưa xử lý
- + Khi một ngoại lệ xảy ra, nếu ứng dụng của bạn không xử lý Exception filters sẽ xử lý ngoại lệ đó và trả về response cho người dùng
- + Nest cung cấp class HttpException để gửi các response http tiêu chuẩn khi có lỗi xảy ra.
- + Ngoài ra, bạn có thể tạo ra các bộ lọc riêng cho ứng dụng của mình bằng cách kế thừa HttpException.
+This project includes a `docs` folder with more details on:
 
+1.  [Setup and development](https://narhakobyan.github.io/awesome-nest-boilerplate/docs/development.html#first-time-setup)
+1.  [Architecture](https://narhakobyan.github.io/awesome-nest-boilerplate/docs/architecture.html)
+
+## Community
+
+For help, discussion about best practices, or any other conversation that would benefit from being searchable:
+
+[Discuss Awesome NestJS Boilerplate on GitHub](https://github.com/NarHakobyan/awesome-nest-boilerplate/discussions)
+
+<a href="https://git.amela.vn/kisshoku-kanri/api/-/blob/sprint_1/docs/README_SETUP_PROD.md">Doc Setup product</a>
+
+<a href="https://git.amela.vn/module-h-a/base_nestjs/-/blob/sprint_1/docs/README_CONVENTION.md">Doc Convention</a>
+
+<a href="https://git.amela.vn/kisshoku-kanri/api/-/blob/sprint_1/docs/README_BUILD_MODULE.md">Doc build package module with NPM</a>
+
+<a href="https://git.amela.vn/kisshoku-kanri/api/-/blob/sprint_1/docs/README_LIFECYCLE_AND_FOLDER.md">Doc lifecycle and folder nestJs</a>
+
+<a href="https://git.amela.vn/kisshoku-kanri/api/-/blob/sprint_1/docs/README_SETUP_GENERATE_WITH_BOILERPLATE.md">Doc setup generate with boilerplate</a>
+
+<a href="https://git.amela.vn/kisshoku-kanri/api/-/blob/sprint_1/docs/README_MIGRATION_AND_SEEDER.md">Doc setup migrations and seeders </a>
+
+<a href="https://git.amela.vn/kisshoku-kanri/api/-/blob/sprint_1/docs/README_CD_SCRIPTS.md">Doc setup cd </a>

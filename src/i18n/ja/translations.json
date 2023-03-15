@@ -1,0 +1,28 @@
+{
+    "error": {
+        "fields": {
+            "array_unique": "配列の項目は一意である必要があります",
+            "unique": "アイテムは一意である必要があります",
+            "max_length": "このフィールドの長さが許可されている長さを超えています",
+            "is_not_empty": "このフィールドを空にすることはできません",
+            "is_string": "このファイルは文字列である必要があります",
+            "is_enum": "このフィールドは列挙型である必要があります",
+            "array_min_size": "このフィールドを空にすることはできません",
+            "is_array": "このフィールドは配列である必要があります"
+        },
+        "cant_set_user_role": "ユーザーロールを設定できません",
+        "cant_add_office": "このオフィスを追加できません",
+        "cant_delete_office": "このオフィスは削除できません",
+        "email_exits": "メールは既に存在します",
+        "office_not_exits": "事業所は存在していません",
+        "office_exits": "事業所は既に存在しています",
+        "payments_not_exits": "お支払方法は存在していません",
+        "payment_exits": "お支払方法は既に存在しています",
+        "user_exits": "ユーザーは既に存在しています",
+        "user_not_exits": "ユーザーは存在していません",
+        "user_not_found": "アカウントが存在していません。",
+        "user_blocked": "アカウントがブロックされました。",
+        "data_not_found": "データが見つかりません。",
+        "login_error": "ログイン情報が正しくありません。"
+    }
+}

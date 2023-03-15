@@ -1,0 +1,30 @@
+{
+    "error": {
+        "fields": {
+            "array_unique": "The items of the array must be unique",
+            "unique": "The item must be unique",
+            "max_length": "The length of this field is larger than allowed",
+            "is_not_empty": "This field cannot be empty",
+            "is_string": "This fild must be a string",
+            "is_enum": "This field must be an enum",
+            "array_min_size": "This field cannot be empty",
+            "is_array": "This field must be an array"
+        },
+        "cant_set_user_role": "Cannot set user role",
+        "cant_delete_office": "Can't delete this office",
+        "cant_add_office": "Can't add this office",
+        "email_exits": "Email already exists",
+        "office_not_exits": "Office does not exits",
+        "office_exits": "Office already exists",
+        "payments_not_exits": "Payment does not exits",
+        "payment_exits": "Payment already exists",
+        "user_not_found": "User not found",
+        "login_error": "Wrong email or password",
+        "user_old_pass_wrong": "Old password is wrong",
+        "user_exits": "User already exists",
+        "user_not_exits": "User does not exist",
+        "user_blocked": "User has been blocked",
+        "data_not_found": "Data not found",
+        "need_use_dto": "`You need to use @UseDto on class {arg} be able to call toDto function`"
+    }
+}

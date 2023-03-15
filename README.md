@@ -1,8 +1,8 @@
 # BasicNestJS
 
-BasicProject NestJs
+# BasicProject NestJs
 
-Cấu trúc project:
+# Cấu trúc project:
 
 - Khởi tạo project sẽ có các thành phần chính sau đây:
  + main.ts: Sử dụng NestFactory để khởi tạo ứng dụng.
@@ -65,4 +65,7 @@ Cấu trúc project:
  + Khi một ngoại lệ xảy ra, nếu ứng dụng của bạn không xử lý Exception filters sẽ xử lý ngoại lệ đó và trả về response cho người dùng
  + Nest cung cấp class HttpException để gửi các response http tiêu chuẩn khi có lỗi xảy ra.
  + Ngoài ra, bạn có thể tạo ra các bộ lọc riêng cho ứng dụng của mình bằng cách kế thừa HttpException.
+ 
+# Author
 
+Manh Luong

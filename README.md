@@ -1,15 +1,10 @@
 # BasicProject NestJs
-​
-3
+
 [![CI Status](https://img.shields.io/travis/QuangTran/UnitImageLayerEditor.svg?style=flat)](https://travis-ci.org/QuangTran/UnitImageLayerEditor)
-4
 [![Version](https://img.shields.io/cocoapods/v/UnitImageLayerEditor.svg?style=flat)](https://cocoapods.org/pods/UnitImageLayerEditor)
-5
 [![License](https://img.shields.io/cocoapods/l/UnitImageLayerEditor.svg?style=flat)](https://cocoapods.org/pods/UnitImageLayerEditor)
-6
 [![Platform](https://img.shields.io/cocoapods/p/UnitImageLayerEditor.svg?style=flat)](https://cocoapods.org/pods/UnitImageLayerEditor)
-7
-​
+
 # Cấu trúc project:
 
 - Khởi tạo project sẽ có các thành phần chính sau đây:
